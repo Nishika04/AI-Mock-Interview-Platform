@@ -2,14 +2,14 @@ import React from 'react';
 import dayjs from 'dayjs';
 import Image from 'next/image'
 
-import {getRandomInterviewCover} from '@/public/utils'
+import {getRandomInterviewCover} from '@/lib/utils'
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-const InterviewCard = ({interviewId, userID, role, type, techstach,createdAt  }: InterviewCardProps) => {
+const InterviewCard = ({interviewId, userId, role, type, techstack,createdAt  }: InterviewCardProps) => {
     const feedback = null as Feedback | null;
     const normalizedType = /mix/gi.test(type) ? 'Mixed': type;
 
-    const formattedDate =dayjs(feedback?.createdAT || createdAt || Date.now()).format('MMM D, YYYY');
+    const formattedDate =dayjs(feedback?.createdAt || createdAt || Date.now()).format('MMM D, YYYY');
 
   return (
     <div className='card-border w-[360px] max-sm:w-full min-h-96'>
