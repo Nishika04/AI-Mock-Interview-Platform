@@ -1,8 +1,10 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import Image from 'next/image'
+
 import {getRandomInterviewCover} from '@/public/utils'
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const InterviewCard = ({interviewId, userID, role, type, techstach,createdAt  }: InterviewCardProps) => {
     const feedback = null as Feedback | null;
     const normalizedType = /mix/gi.test(type) ? 'Mixed': type;
